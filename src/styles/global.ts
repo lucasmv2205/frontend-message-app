@@ -3,8 +3,10 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   :root{
       --footer-background: #FAFAFA;
-      --border: #DCDCDC;
+      --border-color: #DCDCDC;
       --yellow: #FAD34F;
+      --text-color: #2D2D2D;
+      --font-color: #3E3E3E;
   }
 
   *{
