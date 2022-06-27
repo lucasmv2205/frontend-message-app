@@ -27,7 +27,7 @@ export default function Form(){
 
   async function handleSubmitMessage(data: FormData) {
     try {
-      const response = await api.post("message", {data})
+      const response = await api.post("message", data)
       console.log(response);
     } catch (error) {
       
