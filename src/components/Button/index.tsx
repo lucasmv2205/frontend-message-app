@@ -6,7 +6,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   statusButton?: boolean;
 }
 
-export function Button({ title, statusButton, ...rest }: Props) {
+export function Button({ title, statusButton, ...rest }: Props | any) {
   return (
     <StyledButton {...rest}>
       <Title>
