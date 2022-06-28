@@ -10,11 +10,11 @@ export default function Home(){
   return(
     <>
       <Container>
-        <MapComponent />
         <ImageTopYellow src={yellowImage} />
         <Form />
         <ImagePink src={pinkImage} />
         <ImageYellow src={bigYellowImage} />
+        <MapComponent />
       </Container>
       <Footer />
     </>
