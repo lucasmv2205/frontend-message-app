@@ -1,3 +1,4 @@
+import { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -6,7 +7,8 @@ import { Container, Title } from "./styles";
 import { ControlledInput } from "../ControlledInput";
 import { ControlledTextArea } from "../ControlledTextArea";
 import { api } from "../../services/api";
-import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 type FormData = {
   name: string;
@@ -24,6 +26,9 @@ const schema = yup.object({
 });
 
 export default function Form() {
+  const addSuccessToast = () => toast.success("Message sent successfully!");
+  const addErrorToast = () => toast.error("error sending message!");
+  
   const [statusButton, setStatusButton] = useState<Boolean>(false);
   const { control, handleSubmit, formState } = useForm<FormData>({
     resolver: yupResolver(schema),
@@ -35,18 +40,18 @@ export default function Form() {
     try {
       const response = await api.post("message", data);
       console.log(response);
-      if (response.status === 201) {
-        //toast
-      }
       setStatusButton(false);
+      addSuccessToast()
     } catch (error) {
       console.log(error);
       setStatusButton(false);
+      addErrorToast()
     }
   }
 
   return (
     <Container>
+      <ToastContainer />
       <Title>Reach out us!</Title>
       <ControlledInput
         name="name"

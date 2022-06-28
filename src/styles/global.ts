@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   :root{
       --footer-background: #FAFAFA;
       --border-color: #DCDCDC;
+      --footer-border: #D8D8D8;
       --yellow: #FAD34F;
       --text-color: #2D2D2D;
       --font-color: #3E3E3E;

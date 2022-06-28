@@ -5,6 +5,7 @@ export const FooterContainer = styled.div`
   bottom: 0;
   width: 100%;
   background-color: var(--footer-background);
+  border: 1px solid var(--footer-border);
 `;
 
 export const Container = styled.div`
@@ -25,6 +26,7 @@ export const IconContainer = styled.div`
 
 export const ImagePink = styled.img`
   width: 14rem;
+  margin-bottom: -3rem;
 `
 
 export const ImageGreen = styled.img`
