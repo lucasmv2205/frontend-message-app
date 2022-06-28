@@ -9,3 +9,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
+
+export const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0%;
+`

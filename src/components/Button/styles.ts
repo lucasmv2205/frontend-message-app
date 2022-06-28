@@ -12,6 +12,10 @@ export const StyledButton = styled.button`
 `;
 
 export const Title = styled.span`
-  font-size: 18px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   color: #FFFFFF;
 `;
